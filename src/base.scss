@@ -13,6 +13,8 @@ body{
   margin:auto;
   font-family: 'roboto', sans-serif;
   background-color:lighten($tertiary, 20);
+  max-height: auto;
+  
 }
 
 
@@ -22,7 +24,7 @@ a{
 }
 
 
-
+/**
 
 
 header{
@@ -63,7 +65,7 @@ a{
  color:black;
  text-decoration: none;
 }
-**/
+**
 .btn{
   display: flex;
   align-content: flex-end;
@@ -111,6 +113,8 @@ a{
   
   }
 }
+
+**/
 
 .fas:hover{
   color: lighten($primary, 5);
@@ -197,4 +201,8 @@ img{
   width: 100%;
   border-radius: 20px;
   
+}
+
+section{
+  height:auto;
 }

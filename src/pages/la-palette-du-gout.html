@@ -10,12 +10,91 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
-  <title>Document</title>
+  <title>La palette du goût</title>
 </head>
 <body>
   
+  <%- include('../partials/header/header2.html',{
+    "image" : "jay-wennington-N_Y88TWmGwA-unsplash",
+    "titre":"A la Française",
+    "adresse" : "Cité rouge",
+  }); %>
+<section>
+
+    <h5>Entrées</h5>
+<aside>
+
+  <%- include('../partials/menu/menu.html',{
+    "plat":"Tartare de poulpe acidulé",
+    "info" : "Aux zestes d'orange",
+    "price"  : "25€"
+  }); %>
 
 
-  <%- include('../partials/footer/footer.html'); %>
+<%- include('../partials/menu/menu.html',{
+    "plat":"Velouté de légumes d'antan",
+    "info" : "Carotte, panais, topinambour",
+    "price"  : "35€"
+  }); %>
+
+    <%- include('../partials/menu/menu.html',{
+        "plat":"Soupe à l'oignon",
+        "info" : "Revisitée",
+        "price"  : "20€"
+      }); %>
+    
+    </aside>
+    <h5>Plats</h5>
+    <aside>
+        <%- include('../partials/menu/menu.html',{
+            "plat":"Coquilles Saint-Jacques",
+            "info" : "Accompagnées d'une purée de panais",
+            "price"  : "40€"
+          }); %>
+        
+        
+        <%- include('../partials/menu/menu.html',{
+            "plat":"Magret de canard",
+            "info" : "Et parmentier de pommes de terre",
+            "price"  : "35€"
+          }); %>
+        
+            <%- include('../partials/menu/menu.html',{
+                "plat":"Pigeonneau d’Ille-et-Vilaine",
+                "info" : "Sur son lit de gnocchis aux légumes",
+                "price"  : "44€"
+              }); %>
+
+
+    </aside>
+    <h5>Desserts</h5>
+<aside>
+
+    <%- include('../partials/menu/menu.html',{
+        "plat":"Pétales de violettes glacés",
+        "info" : "Et purée de noisettes",
+        "price"  : "40€"
+      }); %>
+    
+    
+    <%- include('../partials/menu/menu.html',{
+        "plat":"Fondant au chocolat",
+        "info" : "Revisité",
+        "price"  : "22€"
+      }); %>
+    
+        <%- include('../partials/menu/menu.html',{
+            "plat":"Millefeuille croustillant",
+            "info" : "Myrtilles et pâte d’amande",
+            "price"  : "23€"
+          }); %>
+
+
+</aside>
+
+<%- include('../partials/footer/footer.html'); %>
+</section>
+
+  
 </body>
 </html>
