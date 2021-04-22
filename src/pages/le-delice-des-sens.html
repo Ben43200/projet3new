@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
-  <title>A la française</title>
+  <title>La note enchantée</title>
 </head>
-
 <body>
-
-
-
-
-<%- include('../partials/header/header2.html',{
-    "image" : "toa-heftiba-DQKerTsQwi0-unsplash",
-    "titre":"A la Française",
+  
+  <%- include('../partials/header/header2.html',{
+    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash",
+    "titre":"Le délice des sens",
     "adresse" : "Cité rouge",
   }); %>
 <section>
@@ -30,43 +25,46 @@
 <aside>
 
   <%- include('../partials/menu/menu.html',{
-    "plat":"Tartare de poulpe acidulé",
-    "info" : "Aux zestes d'orange",
+    "plat":"Tartare de thon",
+    "info" : "Assaisonné au yuzu",
     "price"  : "25€"
   }); %>
 
 
 <%- include('../partials/menu/menu.html',{
-    "plat":"Velouté de légumes d'antan",
-    "info" : "Carotte, panais, topinambour",
+    "plat":"Bouchée de homard croustillant",
+    "info" : "Et sa farandole de petits légumes",
     "price"  : "35€"
   }); %>
 
     <%- include('../partials/menu/menu.html',{
-        "plat":"Soupe à l'oignon",
-        "info" : "Revisitée",
+        "plat":"Velouté de cèpes ",
+        "info" : "Aux truffes",
         "price"  : "20€"
       }); %>
     
+    
+
+
     </aside>
     <h5>Plats</h5>
     <aside>
         <%- include('../partials/menu/menu.html',{
-            "plat":"Coquilles Saint-Jacques",
-            "info" : "Accompagnées d'une purée de panais",
+            "plat":"Poulet rôti aux herbes de Provence",
+            "info" : "Et sa crème de truffe",
             "price"  : "40€"
           }); %>
         
         
         <%- include('../partials/menu/menu.html',{
-            "plat":"Magret de canard",
-            "info" : "Et parmentier de pommes de terre",
+            "plat":"Langouste rôtie",
+            "info" : "Et ses légumes de saison",
             "price"  : "35€"
           }); %>
         
             <%- include('../partials/menu/menu.html',{
-                "plat":"Pigeonneau d’Ille-et-Vilaine",
-                "info" : "Sur son lit de gnocchis aux légumes",
+                "plat":"Côte de boeuf Angus",
+                "info" : "Et sa purée de panais",
                 "price"  : "44€"
               }); %>
 
@@ -76,21 +74,21 @@
 <aside>
 
     <%- include('../partials/menu/menu.html',{
-        "plat":"Pétales de violettes glacés",
-        "info" : "Et purée de noisettes",
-        "price"  : "40€"
+        "plat":"Farandole de desserts",
+        "info" : "Du chef",
+        "price"  : "18€"
       }); %>
     
     
     <%- include('../partials/menu/menu.html',{
-        "plat":"Fondant au chocolat",
-        "info" : "Revisité",
+        "plat":"Crème brulée",
+        "info" : "Revisitée",
         "price"  : "22€"
       }); %>
     
         <%- include('../partials/menu/menu.html',{
-            "plat":"Millefeuille croustillant",
-            "info" : "Myrtilles et pâte d’amande",
+            "plat":"Tiramisu",
+            "info" : "À la noisette",
             "price"  : "23€"
           }); %>
 
@@ -100,5 +98,6 @@
 <%- include('../partials/footer/footer.html'); %>
 </section>
 
+  
 </body>
 </html>
