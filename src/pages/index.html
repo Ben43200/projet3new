@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
+  <title>Ohmyfood</title>
+</head>
+</head>
+<body>
+  
+  <h1 class="logo">Ohmyfood</h1>
+  
+  <%- include('../partials/header/header1.html'); %>
+  
+  <h3 class="descript">Fonctionnement</h3>
+  <nav class="menu_descript">
+    <div class="btn_menu"><div class="circle">1</div><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</div>
+    <div class="btn_menu"><div class="circle">2</div><i class="fas fa-list-ul"></i>Composez votre menu</div>
+    <div class="btn_menu"><div class="circle">3</div><i class="fas fa-store"></i>Dégustez votre menu</div>
+  </nav>
+  
+  
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "jay-wennington-N_Y88TWmGwA-unsplash",
+    "titre":"la palette du goût",
+    "adresse" : "Menilmontant",
+  }); %>
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "stil-u2Lp8tXIcjw-unsplash",
+    "titre":"La note enchantée",
+    "adresse" : "Charonne",
+  }); %>
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "toa-heftiba-DQKerTsQwi0-unsplash",
+    "titre":"A la Française",
+    "adresse" : "Cité rouge",
+  }); %>
+  <%- include('../partials/restaurant/restaurant.html',{
+    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash",
+    "titre":"Le délice des sens",
+    "adresse" : "Folie-Méricourt",
+  }); %>
+  
+  
+  
+  
+  <%- include('../partials/footer/footer.html'); %>
+</body>
+</html>

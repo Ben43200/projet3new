@@ -1,0 +1,217 @@
+
+
+
+
+.plat__info{
+    border: 1px solid gray;
+    margin-top:10px;
+    @include shadow (darken($tertiary, 10));
+    border-radius: 10px;
+    height:60px;
+    width:400px;
+   display:flex;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   justify-content:space-between;
+    /**align-self:flex-end;**/
+    
+    
+   
+
+/**
+   h4{
+      
+     /**
+      text-overflow: ellipsis;
+      white-space: nowrap;**/
+      padding:1px;
+      
+    
+}
+
+  .price{
+    
+   /** display:flex;**/
+/**flex-direction: column;**/
+    /**align-content:flex-end;**/
+    font-size: 1.125rem;
+    font-weight: bold;
+   /** align-items: flex-end;**/
+   /** align-self: baseline;***/
+    /**padding-left: 200px;**/
+   /**white-space: nowrap;**/
+   align-self: flex-end;
+  margin: auto;
+  
+ /**  left:50px;**/
+  
+  
+  
+ /**  left:50px;**/
+ 
+    
+ 
+    
+  } 
+
+
+
+    
+
+ hgroup{
+     line-height: 0px;
+ }
+
+  
+ .font{
+    display:none;
+    border: 2px solid $tertiary;
+    background-color:(darken($tertiary, 10));
+    border-radius: 10px;
+    padding:10px;
+    transform:  translateX(70px) ;
+    /**text-overflow: ellipsis;
+    white-space: nowrap;**
+    justify-content: center;
+    align-items: center;
+   
+    /**transition: transform 330ms ease-in-out;**/
+    .fa-check-circle{
+        font-size: 30px;
+        color:white;
+         
+        
+    
+        }
+    }
+        .info{
+            font-size:10px;
+            color:black;
+            padding:0px;
+        } 
+
+        @keyframes checkbox {
+            0% {
+              transform: translate(0px,0);
+            }
+          
+            20% {
+              transform: translate(7px, 0);
+            }
+          
+            40% {
+              transform: translate(20px, 0);
+            }
+            60% {
+              transform: translate(15px, 0);
+            }
+            80% {
+              transform: translate(7px, 0);
+            }
+          
+            100% {
+              transform: translate(1px, 0);
+            }
+          }
+          
+          @keyframes wrench {
+            0% {
+              -webkit-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+              transform: rotate(0deg);
+            }
+            30% {
+                -webkit-transform: rotate(-15deg);
+                -ms-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+              }
+            
+            30% {
+                -webkit-transform: rotate(-25deg);
+                -ms-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+              }
+            50% {
+              -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+            60% {
+                -webkit-transform: rotate(-60deg);
+                -ms-transform: rotate(-60deg);
+                transform: rotate(-60deg);
+              }
+              65% {
+                -webkit-transform: rotate(-80deg);
+                -ms-transform: rotate(-80deg);
+                transform: rotate(-80deg);
+              }
+            
+            75% {
+              -webkit-transform: rotate(-90deg);
+              -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+            }
+            85% {
+                -webkit-transform: rotate(-100deg);
+                -ms-transform: rotate(-100deg);
+                transform: rotate(-100deg);
+              }
+            
+          
+            100% {
+              -webkit-transform: rotate(-110deg);
+              -ms-transform: rotate(-110deg);
+              transform: rotate(-110deg);
+            }
+          }
+          .plat__info:hover{
+           
+         .font {
+            
+           display:flex;
+            
+        
+            -webkit-animation: checkbox 500ms  ease-in-out;
+            animation: checkbox 500ms ease-in-out;
+            
+            transform: translateX(0px);
+            .fa-check-circle{
+            -webkit-animation: wrench 350ms  ease-in-out;
+            animation: wrench 350ms ease-in-out;
+            
+        
+        /**transition: transform 330ms ease-in-out**/
+        }
+    
+       
+    }}
+        
+
+
+
+
+
+    .font{
+        display:none;
+        border: 2px solid $tertiary;
+        background-color:(darken($tertiary, 10));
+        border-radius: 10px;
+        padding:10px;
+        transform:  translateX(70px) ;
+        /**text-overflow: ellipsis;/
+        white-space: nowrap;**/
+        justify-content: center;
+        align-items: center;
+       
+        /**transition: transform 330ms ease-in-out;**/
+        .fa-check-circle{
+            font-size: 30px;
+            color:white;
+             
+            
+        
+            }
+    }
+

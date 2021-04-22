@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/a528402c70.js" crossorigin="anonymous"></script>
+  <title>Ohmyfood</title>
+</head>
+</head>
+<body>
+
+
+
+
+<%- include('../partials/header/header2.html',{
+    "image" : "jay-wennington-N_Y88TWmGwA-unsplash",
+    "titre":"A la Française",
+    "adresse" : "Cité rouge",
+  }); %>
+<section>
+<aside>
+
+  <%- include('../partials/menu/menu.html',{
+    "plat":"Tartare de poulpe acidulé",
+    "info" : "Aux zestes d'orange",
+    "price"  : "25€"
+  }); %>
+
+
+<%- include('../partials/menu/menu.html',{
+    "plat":"Velouté de légumes d'antan",
+    "info" : "Carotte, panais, topinambour",
+    "price"  : "35€"
+  }); %>
+
+    <%- include('../partials/menu/menu.html',{
+        "plat":"Soupe à l'oignon",
+        "info" : "Revisitée",
+        "price"  : "20€"
+      }); %>
+    
+    </aside>
+</section>
