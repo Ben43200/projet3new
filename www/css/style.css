@@ -4,6 +4,41 @@
  * browser capacity, if not any an alternative image is displayed. If not any alternative
  * image is given, the image is used as alternative as well 
  */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
 body {
   max-width: 400px;
   margin: auto;
@@ -159,20 +194,6 @@ img {
   width: 100%;
   border-radius: 20px; }
 
-section {
-  height: auto; }
-
-footer {
-  background-color: black;
-  color: white;
-  margin-bottom: auto; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-
-ul {
-  list-style-type: none; }
-
 /**
  *
  * This mixin will permit to display a colored background image following the 
@@ -284,6 +305,17 @@ img {
 header {
   height: auto; }
 
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: auto; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+
+ul {
+  list-style-type: none; }
+
 .plat__info {
   border: 1px solid gray;
   margin-top: 10px;
@@ -291,74 +323,45 @@ header {
   border-radius: 10px;
   height: 60px;
   width: 400px;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  justify-content: space-between;
-  /**align-self:flex-end;**/
-  /**
+  /**align-self:flex-end;**/ }
+
+h4 {
+  grid-row: 1; }
+
+h5 {
+  grid-row: 2; }
+
+/**
    h4{
       
      /**
       text-overflow: ellipsis;
       white-space: nowrap;**/
-  padding: 1px; }
-
 .price {
-  /** display:flex;**/
-  /**flex-direction: column;**/
-  /**align-content:flex-end;**/
-  font-size: 1.125rem;
-  font-weight: bold;
-  /** align-items: flex-end;**/
-  /** align-self: baseline;***/
-  /**padding-left: 200px;**/
-  /**white-space: nowrap;**/
-  align-self: flex-end;
+  grid-row: 2;
+  grid-column: 4;
   margin-left: auto;
-  padding-right: 5px;
-  /**  left:50px;**/
-  /**  left:50px;**/ }
+  padding-left: 8px; }
 
-hgroup {
-  line-height: 0px; }
-
-.font {
-  display: none;
-  border: 2px solid #99E2D0;
-  background-color: #71d7be;
-  border-radius: 10px;
-  padding: 10px;
-  transform: translateX(70px);
-  /**text-overflow: ellipsis;
-    white-space: nowrap;**
-    justify-content: center;
-    align-items: center;
-   
-    /**transition: transform 330ms ease-in-out;**/ }
-  .font .fa-check-circle {
-    font-size: 30px;
-    color: white; }
-
+/** display:flex;**/
+/**flex-direction: column;**/
+/**align-content:flex-end;**/
+/** align-items: flex-end;**/
+/** align-self: baseline;***/
+/**padding-left: 200px;**/
+/**white-space: nowrap;**/
+/**  left:50px;**/
+/**  left:50px;**/
 .info {
   font-size: 10px;
   color: black;
   padding: 0px; }
-
-@keyframes checkbox {
-  0% {
-    transform: translate(0px, 0); }
-  20% {
-    transform: translate(7px, 0); }
-  40% {
-    transform: translate(20px, 0); }
-  60% {
-    transform: translate(15px, 0); }
-  80% {
-    transform: translate(7px, 0); }
-  100% {
-    transform: translate(1px, 0); } }
 
 @keyframes wrench {
   0% {
@@ -398,8 +401,10 @@ hgroup {
     -ms-transform: rotate(-110deg);
     transform: rotate(-110deg); } }
 
+.plat__info:hover .price {
+  margin-right: 70px; }
+
 .plat__info:hover .font {
-  display: flex;
   -webkit-animation: checkbox 500ms  ease-in-out;
   animation: checkbox 500ms ease-in-out;
   transform: translateX(0px); }
@@ -409,16 +414,20 @@ hgroup {
     /**transition: transform 330ms ease-in-out**/ }
 
 .font {
-  display: none;
   border: 2px solid #99E2D0;
   background-color: #71d7be;
   border-radius: 10px;
-  padding: 10px;
-  transform: translateX(70px);
-  /**text-overflow: ellipsis;/
-        white-space: nowrap;**/
-  justify-content: center;
-  align-items: center;
+  padding: 12px;
+  transform: translateX(200px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: auto;
+  margin-left: 40px;
+  grid-column: 4;
+  grid-row: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   /**transition: transform 330ms ease-in-out;**/ }
   .font .fa-check-circle {
     font-size: 30px;
@@ -430,17 +439,14 @@ img {
   width: 100%;
   border-radius: 20px; }
 
-section {
-  height: 1500px;
-  border-radius: 20px;
-  margin-top: 100px; }
-  section h2 {
-    font-size: 30px; }
+section h2 {
+  font-size: 30px; }
 
-article {
+.card {
   height: 300px;
   background-color: white;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-top: 50px; }
 
 .custom-checkbox input[type="checkbox"],
 .custom-checkbox .checked {
