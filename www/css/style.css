@@ -156,11 +156,14 @@ img {
   width: 100%;
   border-radius: 20px; }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 600px) {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px; } }
+    gap: 40px; }
+  .menu__details {
+    flex-wrap: wrap;
+    align-content: flex-start; } }
 
 @media screen and (min-width: 900px) {
   .grid-container {
@@ -168,7 +171,24 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 40px; }
   .footer__info {
-    align-self: flex-end; } }
+    margin-left: auto; } }
+
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: auto; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
+
+.footer__inf0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+ul {
+  list-style-type: none;
+  align-content: flex-end; }
 
 i.fa-heart {
   width: 3rem;
@@ -189,25 +209,6 @@ i.fa-heart {
     background-position-y: 2.5rem; }
   to {
     background-position-y: 5.5rem; } }
-
-img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 20px; }
-
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin-top: 50px; }
-
-.menu__details {
-  display: flex;
-  justify-content: space-between; }
 
 .plat__info {
   border: 1px solid gray;
@@ -329,29 +330,6 @@ h5 {
 .card__info {
   display: flex; }
 
-footer {
-  background-color: black;
-  color: white;
-  margin-bottom: auto; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-
-.footer__inf0 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-
-ul {
-  list-style-type: none;
-  align-content: flex-end; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
 /**
  *
  * This mixin will permit to display a colored background image following the 
@@ -462,3 +440,29 @@ img {
 
 header {
   height: auto; }
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
+
+.menu__details {
+  display: flex;
+  justify-content: space-around; }
+
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */

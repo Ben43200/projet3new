@@ -209,14 +209,17 @@ img{
 //   margin-top:40px;
 // 
 
-@media screen and  (min-width: 400px) {
+@media screen and  (min-width: 600px) {
 
   .grid-container{
     display:grid;
     grid-template-columns: 1fr;
     gap:40px;
   }
-  
+  .menu__details{
+    flex-wrap: wrap;
+    align-content:flex-start
+  }
   }
 
 @media screen and  (min-width: 900px) {
@@ -227,7 +230,7 @@ img{
   gap:40px;
 }
 .footer__info{
-align-self: flex-end;
+margin-left: auto;
 
 }
 }
