@@ -9,6 +9,14 @@ footer{
     }
 }
 
+.footer__inf0{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 ul{
     list-style-type: none;
+    align-content: flex-end;
 }

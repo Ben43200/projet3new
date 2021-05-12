@@ -27,7 +27,7 @@
 <section>
 
     <h5>Entrées</h5>
-<aside>
+    <article class="menu__details">
 
   <%- include('../partials/menu/menu.html',{
     "plat":"Tartare de poulpe acidulé",
@@ -48,9 +48,9 @@
         "price"  : "20€"
       }); %>
     
-    </aside>
+    </article>
     <h5>Plats</h5>
-    <aside>
+    <article class="menu__details">
         <%- include('../partials/menu/menu.html',{
             "plat":"Coquilles Saint-Jacques",
             "info" : "Accompagnées d'une purée de panais",
@@ -71,9 +71,9 @@
               }); %>
 
 
-    </aside>
+    </article>
     <h5>Desserts</h5>
-<aside>
+    <article class="menu__details">
 
     <%- include('../partials/menu/menu.html',{
         "plat":"Pétales de violettes glacés",
@@ -95,7 +95,7 @@
           }); %>
 
 
-</aside>
+    </article>
 
 <%- include('../partials/footer/footer.html'); %>
 </section>

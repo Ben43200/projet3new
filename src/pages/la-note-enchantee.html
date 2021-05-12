@@ -22,7 +22,7 @@
 <section>
 
     <h5>Entrées</h5>
-<aside>
+<article class="menu__details">
 
   <%- include('../partials/menu/menu.html',{
     "plat":"Ravioles de foie gras",
@@ -50,9 +50,9 @@
       }); %>
 
 
-    </aside>
+</article>
     <h5>Plats</h5>
-    <aside>
+    <article class="menu__details">
         <%- include('../partials/menu/menu.html',{
             "plat":"Noix de coquilles Saint-Jacques",
             "info" : "Sur lit de purée de céleri-rave",
@@ -73,9 +73,9 @@
               }); %>
 
 
-    </aside>
+    </article>
     <h5>Desserts</h5>
-<aside>
+    <article class="menu__details">
 
     <%- include('../partials/menu/menu.html',{
         "plat":"Macaron noisette et chocolat",
@@ -97,7 +97,7 @@
           }); %>
 
 
-</aside>
+    </article>
 
 <%- include('../partials/footer/footer.html'); %>
 </section>

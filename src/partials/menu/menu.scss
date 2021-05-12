@@ -5,7 +5,8 @@
 .plat__info{
     border: 1px solid gray;
     margin-top:10px;
-    @include shadow (darken($tertiary, 10));
+    // @include shadow (darken($tertiary, 10));
+    background-color: white;
     border-radius: 10px;
     height:60px;
     width:400px;
@@ -44,6 +45,7 @@
   //  text-overflow: ellipsis;
    margin-left:auto;
    padding-left:8px;
+   
 
 
   }
@@ -244,6 +246,10 @@
             }
     }
 
+
+    .card__info{
+      display: flex;
+    }
 
 
 

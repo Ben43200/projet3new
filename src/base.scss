@@ -9,7 +9,7 @@ $radius:border-radius 20px;
 
 
 body{
-  max-width: 400px;
+ 
   margin:auto;
   font-family: 'roboto', sans-serif;
   background-color:lighten($tertiary, 20);
@@ -116,73 +116,74 @@ a{
 
 **/
 
-.fas:hover{
-  color: lighten($primary, 5);
+// .fas:hover{
+//   color: lighten($primary, 5);
   
-}
+// }
 
-.custom-checkbox input[type="checkbox"],
-.custom-checkbox .checked {
-    display: none;
-}
+// .custom-checkbox input[type="checkbox"],
+// .custom-checkbox .checked {
+//     display: none;
+// }
 
-.custom-checkbox input[type="checkbox"]:checked ~ .checked
-{
-    display: inline-block;
+// .custom-checkbox input[type="checkbox"]:checked ~ .checked
+// {
+//     display: inline-block;
     
     
-}
+// }
 
-.custom-checkbox input[type="checkbox"]:checked ~ .unchecked
-{
-    display: none;
+// .custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+// {
+//     display: none;
     
-}
+// }
 
 
 
-.fa.fas.fa-heart{
-    position:absolute;
-    color:$primary;
+// .fa.fas.fa-heart{
+//     position:absolute;
+//     color:$primary;
     
     
-}
+// }
 
 
 
-.fa.far.fa-heart{
-    position: absolute;
-    color:white;
-    font-size: 25px;
-    left:2px;
-    top:2px;
+// .fa.far.fa-heart{
+//     position: absolute;
+//     color:white;
+//     font-size: 25px;
+//     left:2px;
+//     top:2px;
     
-}
-.fa.far.fa-heart:hover{
-  cursor: pointer;
-  transition: color 1s ease-out;
-  color:$primary;
-  position: absolute;
+// }
+// .fa.far.fa-heart:hover{
+//   cursor: pointer;
+//   transition: color 1s ease-out;
+//   color:$primary;
+//   position: absolute;
   
   
   
-}
-.like{
-  position: relative;
+// }
+// .like{
+//   position: relative;
  
   
   
   
   
-}
+// }
 
-.fa-heart{
-  font-size:30px;
-  color:$primary;
-}
+// .fa-heart{
+//   font-size:30px;
+//   color:$primary;
+// }
 
 
 .card{
+  
   height:300px;
   background-color: white;
   border-radius: 20px;
@@ -206,4 +207,27 @@ img{
 // section{
 //   height:auto;
 //   margin-top:40px;
-// }
+// 
+
+@media screen and  (min-width: 400px) {
+
+  .grid-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:40px;
+  }
+  
+  }
+
+@media screen and  (min-width: 900px) {
+
+.grid-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+}
+.footer__info{
+align-self: flex-end;
+
+}
+}

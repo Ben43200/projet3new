@@ -5,7 +5,7 @@
  * image is given, the image is used as alternative as well 
  */
 body {
-  max-width: 400px;
+  
   margin: auto;
   font-family: 'roboto', sans-serif;
   background-color: #e8f9f5;
@@ -148,7 +148,7 @@ a{
 .fas:hover {
   color: #a16be0;
 }
-
+/* 
 .custom-checkbox input[type="checkbox"],
 .custom-checkbox .checked {
   display: none;
@@ -189,6 +189,6 @@ a{
 
 .fa-heart {
   font-size: 30px;
-  color: #9356DC;
+  color: #9356DC; */
 }
 /*# sourceMappingURL=base.css.map */

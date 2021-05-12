@@ -40,7 +40,6 @@ td, th {
   padding: 0; }
 
 body {
-  max-width: 400px;
   margin: auto;
   font-family: 'roboto', sans-serif;
   background-color: #e8f9f5;
@@ -141,43 +140,6 @@ a{
 }
 
 **/
-.fas:hover {
-  color: #a16be0; }
-
-.custom-checkbox input[type="checkbox"],
-.custom-checkbox .checked {
-  display: none; }
-
-.custom-checkbox input[type="checkbox"]:checked ~ .checked {
-  display: inline-block; }
-
-.custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
-  display: none; }
-
-.fa.fas.fa-heart {
-  position: absolute;
-  color: #9356DC; }
-
-.fa.far.fa-heart {
-  position: absolute;
-  color: white;
-  font-size: 25px;
-  left: 2px;
-  top: 2px; }
-
-.fa.far.fa-heart:hover {
-  cursor: pointer;
-  transition: color 1s ease-out;
-  color: #9356DC;
-  position: absolute; }
-
-.like {
-  position: relative; }
-
-.fa-heart {
-  font-size: 30px;
-  color: #9356DC; }
-
 .card {
   height: 300px;
   background-color: white;
@@ -194,103 +156,39 @@ img {
   width: 100%;
   border-radius: 20px; }
 
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
-header {
-  background-color: #e8f9f5; }
+@media screen and (min-width: 400px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px; } }
 
-/**
-  header{
-    background-color: lighten($tertiary, 20);
-    height: 300px;
-    
-  }**/
-.logo {
-  display: flex;
+@media screen and (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; }
+  .footer__info {
+    align-self: flex-end; } }
+
+i.fa-heart {
+  width: 3rem;
+  height: 3rem;
+  display: flex  !important;
   justify-content: center;
-  color: black;
-  font-family: 'Shrikhand', cursive;
-  font-size: 30px; }
-
-.place {
-  display: flex;
-  background-color: #71d7be;
-  justify-content: center;
-  padding: 10px; }
-
-.fas {
-  margin-right: 10px; }
-
-.accroche_title {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  justify-content: space-between;
-  height: 175px; }
+  background: -webkit-linear-gradient(#eee, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  i.fa-heart:hover {
+    font-weight: bold;
+    background-position-y: 2.5rem;
+    animation: position 1s forwards; }
 
-/**
-  a{
-   color:black;
-   text-decoration: none;
-  }
-  **/
-.btn {
-  display: flex;
-  align-content: flex-end;
-  font-size: 17px;
-  padding: 10px;
-  margin-top: 20px;
-  color: white;
-  border-radius: 20px;
-  background-color: #d46bdb;
-  background-image: -moz-linear-gradient(top, #FF79DA, #9356DC);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF79DA), to(#9356DC));
-  background-image: -webkit-linear-gradient(top, #FF79DA, #9356DC);
-  background-image: -o-linear-gradient(top, #FF79DA, #9356DC);
-  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-  .btn:hover {
-    background-color: #d46bdb;
-    background-image: -moz-linear-gradient(top, #FF79DA, #9356DC);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF79DA), to(#9356DC));
-    background-image: -webkit-linear-gradient(top, #FF79DA, #9356DC);
-    background-image: -o-linear-gradient(top, #FF79DA, #9356DC);
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
-
-.descript {
-  font-size: 25px; }
-
-.menu_descript {
-  height: 200px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.btn_menu {
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  width: 100%;
-  justify-content: center;
-  border: 1px solid #4acbab;
-  height: 50px;
-  background-color: #e8f9f5; }
-  .btn_menu .circle {
-    height: 20px;
-    width: 20px;
-    background: #a16be0;
-    text-align: center;
-    border-radius: 50%; }
+@keyframes position {
+  from {
+    background-position-y: 2.5rem; }
+  to {
+    background-position-y: 5.5rem; } }
 
 img {
   object-fit: cover;
@@ -298,28 +196,23 @@ img {
   width: 100%;
   border-radius: 20px; }
 
-.card__info {
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
+
+.menu__details {
   display: flex;
   justify-content: space-between; }
-
-header {
-  height: auto; }
-
-footer {
-  background-color: black;
-  color: white;
-  margin-bottom: auto; }
-  footer h2 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px; }
-
-ul {
-  list-style-type: none; }
 
 .plat__info {
   border: 1px solid gray;
   margin-top: 10px;
-  box-shadow: 1px 1px 2px;
+  background-color: white;
   border-radius: 10px;
   height: 60px;
   width: 400px;
@@ -433,54 +326,25 @@ h5 {
     font-size: 30px;
     color: white; }
 
-img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 20px; }
+.card__info {
+  display: flex; }
 
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin-top: 50px; }
-
-.custom-checkbox input[type="checkbox"],
-.custom-checkbox .checked {
-  display: none; }
-
-.custom-checkbox input[type="checkbox"]:checked ~ .checked {
-  display: inline-block; }
-
-.custom-checkbox input[type="checkbox"]:checked ~ .unchecked {
-  display: none; }
-
-.fa.fas.fa-heart {
-  position: absolute;
-  color: #9356DC; }
-
-.fa.far.fa-heart {
-  position: absolute;
+footer {
+  background-color: black;
   color: white;
-  font-size: 25px;
-  left: 2px;
-  top: 2px; }
+  margin-bottom: auto; }
+  footer h2 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px; }
 
-.fa.far.fa-heart:hover {
-  cursor: pointer;
-  transition: color 1s ease-out;
-  color: #9356DC;
-  position: absolute; }
+.footer__inf0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
 
-.like {
-  position: relative; }
-
-.fa-heart {
-  font-size: 30px;
-  color: #9356DC; }
+ul {
+  list-style-type: none;
+  align-content: flex-end; }
 
 /**
  *
@@ -488,3 +352,113 @@ section h2 {
  * browser capacity, if not any an alternative image is displayed. If not any alternative
  * image is given, the image is used as alternative as well 
  */
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
+header {
+  background-color: #e8f9f5; }
+
+/**
+  header{
+    background-color: lighten($tertiary, 20);
+    height: 300px;
+    
+  }**/
+.logo {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Shrikhand', cursive;
+  font-size: 30px; }
+
+.place {
+  display: flex;
+  background-color: #71d7be;
+  justify-content: center;
+  padding: 10px; }
+
+.fas {
+  margin-right: 10px; }
+
+.accroche_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  justify-content: space-between;
+  height: 175px; }
+
+/**
+  a{
+   color:black;
+   text-decoration: none;
+  }
+  **/
+.btn {
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: #d46bdb;
+  background-image: -moz-linear-gradient(top, #FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF79DA), to(#9356DC));
+  background-image: -webkit-linear-gradient(top, #FF79DA, #9356DC);
+  background-image: -o-linear-gradient(top, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+  .btn:hover {
+    background-color: #d46bdb;
+    background-image: -moz-linear-gradient(top, #FF79DA, #9356DC);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF79DA), to(#9356DC));
+    background-image: -webkit-linear-gradient(top, #FF79DA, #9356DC);
+    background-image: -o-linear-gradient(top, #FF79DA, #9356DC);
+    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFF79DA', endColorstr='#FF9356DC', GradientType=0); }
+
+.descript {
+  font-size: 25px; }
+
+.menu_descript {
+  height: 200px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+.btn_menu {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid #4acbab;
+  height: 50px;
+  background-color: #e8f9f5; }
+  .btn_menu .circle {
+    height: 20px;
+    width: 20px;
+    background: #a16be0;
+    text-align: center;
+    border-radius: 50%; }
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+.card__info {
+  display: flex;
+  justify-content: space-between; }
+
+header {
+  height: auto; }
