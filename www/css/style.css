@@ -173,6 +173,26 @@ img {
   .footer__info {
     margin-left: auto; } }
 
+i.fa-heart {
+  font-size: 20px;
+  padding-right: 20px;
+  display: flex  !important;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#9356DC, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  i.fa-heart:hover {
+    font-weight: bold;
+    background-position-y: 4rem;
+    animation: position 2s forwards; }
+
+@keyframes position {
+  from {
+    background-position-y: 4rem; }
+  to {
+    background-position-y: 2.75rem; } }
+
 footer {
   background-color: black;
   color: white;
@@ -188,6 +208,25 @@ footer {
 
 ul {
   list-style-type: none; }
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
+
+.menu__details {
+  display: flex;
+  justify-content: space-around; }
 
 /**
  *
@@ -299,45 +338,6 @@ img {
 
 header {
   height: auto; }
-
-i.fa-heart {
-  width: 4rem;
-  height: 4rem;
-  display: flex  !important;
-  justify-content: center;
-  align-items: center;
-  background: -webkit-linear-gradient(#9356DC, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-  i.fa-heart:hover {
-    font-weight: bold;
-    background-position-y: 4rem;
-    animation: position 2s forwards; }
-
-@keyframes position {
-  from {
-    background-position-y: 3.5rem; }
-  to {
-    background-position-y: 5.5rem; } }
-
-img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 20px; }
-
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin-top: 50px; }
-
-.menu__details {
-  display: flex;
-  justify-content: space-around; }
 
 .plat__info {
   border: 1px solid gray;
