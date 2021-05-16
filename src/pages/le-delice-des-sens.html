@@ -15,15 +15,18 @@
 <body>
   <a href="index.html"><i class="fas fa-arrow-left"></i></a>
   <%- include('../partials/header/header2.html',{
-    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash",
-    "titre":"Le délice des sens",
-    "adresse" : "Cité rouge",
+    "image" : "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash"
+   
   }); %>
 <section>
 
-    <h5>Entrées</h5>
-    <article class="menu__details">
-
+  <div class="menu__item">
+    <div class="title__item"> 
+    <h3>La palette du goût</h3>
+  <i class="far fa-heart"></i>
+  </div> 
+      <article class="menu__details">
+        <h5>Entrée</h5>
   <%- include('../partials/menu/menu.html',{
     "plat":"Tartare de thon",
     "info" : "Assaisonné au yuzu",

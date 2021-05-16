@@ -42,7 +42,6 @@ td, th {
 body {
   margin: auto;
   font-family: 'roboto', sans-serif;
-  background-color: #e8f9f5;
   max-height: auto; }
 
 a {
@@ -160,10 +159,7 @@ img {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px; }
-  .menu__details {
-    flex-wrap: wrap;
-    align-content: flex-start; } }
+    gap: 40px; } }
 
 @media screen and (min-width: 900px) {
   .grid-container {
@@ -172,6 +168,18 @@ img {
     gap: 40px; }
   .footer__info {
     margin-left: auto; } }
+
+.menu__item {
+  background-color: #e8f9f5;
+  border-radius: 15px 15px 0px 0px;
+  margin-top: -50px;
+  padding: 20px;
+  margin-bottom: 20px; }
+
+.title__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
 
 i.fa-heart {
   font-size: 20px;
@@ -208,25 +216,6 @@ footer {
 
 ul {
   list-style-type: none; }
-
-img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 20px; }
-
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin-top: 50px; }
-
-.menu__details {
-  display: flex;
-  justify-content: space-around; }
 
 /**
  *
@@ -334,7 +323,8 @@ img {
 
 .card__info {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
 
 header {
   height: auto; }
@@ -345,14 +335,15 @@ header {
   background-color: white;
   border-radius: 10px;
   height: 60px;
-  width: 400px;
+  width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /**align-self:flex-end;**/ }
+  /**align-self:flex-end;**/
+  transform-origin: left; }
 
 h4 {
   grid-row: 1; }
@@ -458,6 +449,21 @@ h5 {
 
 .card__info {
   display: flex; }
+
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
 
 /**
  *

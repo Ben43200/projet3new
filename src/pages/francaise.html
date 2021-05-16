@@ -20,15 +20,18 @@
 
 
 <%- include('../partials/header/header2.html',{
-    "image" : "toa-heftiba-DQKerTsQwi0-unsplash",
-    "titre":"A la Française",
-    "adresse" : "Cité rouge",
+    "image" : "toa-heftiba-DQKerTsQwi0-unsplash"
+ 
   }); %>
 <section>
 
-    <h5>Entrées</h5>
-    <article class="menu__details">
-
+  <div class="menu__item">
+    <div class="title__item"> 
+    <h3>A la Française</h3>
+  <i class="far fa-heart"></i>
+  </div> 
+      <article class="menu__details">
+        <h5>Entrée</h5>
   <%- include('../partials/menu/menu.html',{
     "plat":"Tartare de poulpe acidulé",
     "info" : "Aux zestes d'orange",
@@ -96,6 +99,7 @@
 
 
     </article>
+  </div>
 
 <%- include('../partials/footer/footer.html'); %>
 </section>

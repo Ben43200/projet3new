@@ -12,8 +12,9 @@ body{
  
   margin:auto;
   font-family: 'roboto', sans-serif;
-  background-color:lighten($tertiary, 20);
+  // background-color:lighten($tertiary, 20);
   max-height: auto;
+ 
   
 }
 
@@ -216,10 +217,14 @@ img{
     grid-template-columns: 1fr;
     gap:40px;
   }
-  .menu__details{
-    flex-wrap: wrap;
-    align-content:flex-start
-  }
+  // .menu__details{
+  //   flex-wrap: wrap;
+  //   align-content:flex-start;
+  //   flex-direction: column;
+  // }
+  // .Plat__info{
+  //   flex-direction: column;
+  // }
   }
 
 @media screen and  (min-width: 900px) {
@@ -233,4 +238,20 @@ img{
 margin-left: auto;
 
 }
+}
+
+
+
+.menu__item{
+  background-color:lighten($tertiary, 20);
+  border-radius: 15px 15px 0px 0px;
+  margin-top: -50px;
+  padding:20px;
+  margin-bottom:20px;
+}
+
+.title__item{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

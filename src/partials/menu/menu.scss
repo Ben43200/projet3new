@@ -9,7 +9,7 @@
     background-color: white;
     border-radius: 10px;
     height:60px;
-    width:400px;
+    width:100%;
   //   display: grid;
   // height: 100px;
   // grid-template: repeat(4, 1fr) / 20px 100px;
@@ -21,7 +21,10 @@
    white-space: nowrap;
   //  justify-content:space-between;
     /**align-self:flex-end;**/
+    transform-origin: left;
+ 
 }
+
     h4{
       grid-row:1;
     }
