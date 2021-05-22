@@ -357,13 +357,12 @@ header {
   width: 100%;
   display: grid;
   grid-template-areas: "titre prix coche" "description prix coche";
-  grid-template-columns: auto 2rem auto;
+  grid-template-columns: auto 4rem auto;
   grid-template-rows: 50% 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /**align-self:flex-end;**/
-  transform-origin: left; }
+  /**align-self:flex-end;**/ }
   .plat__info h4, .plat__info h5 {
     white-space: nowrap;
     overflow: hidden;
@@ -374,12 +373,29 @@ header {
   .plat__info h5 {
     grid-area: description; }
   .plat__info .font {
-    width: 0;
-    overflow: hidden; }
+    width: 0; }
+  .plat__info .price {
+    grid-area: prix;
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 1.125rem;
+    font-weight: bold; }
   .plat__info:hover h4:first-of-type, .plat__info:hover h5 {
-    width: calc(100% - 5rem); }
+    width: calc(100% - 6rem); }
   .plat__info:hover .font {
-    width: 3rem; }
+    width: 4rem;
+    background-color: #71d7be;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px; }
+
+.fa-check-circle {
+  font-size: 30px;
+  color: white;
+  align-self: center;
+  margin: auto; }
 
 /**
    h4{
@@ -387,11 +403,6 @@ header {
      /**
       text-overflow: ellipsis;
       white-space: nowrap;**/
-.price {
-  display: flex;
-  height: 100%;
-  align-items: center; }
-
 /** display:flex;**/
 /**flex-direction: column;**/
 /**align-content:flex-end;**/
@@ -444,17 +455,10 @@ header {
     -ms-transform: rotate(-110deg);
     transform: rotate(-110deg); } }
 
-.plat__info:hover .price {
-  margin-right: 70px; }
-
-.plat__info:hover .font {
-  -webkit-animation: checkbox 500ms  ease-in-out;
-  animation: checkbox 500ms ease-in-out;
-  transform: translateX(0px); }
-  .plat__info:hover .font .fa-check-circle {
-    -webkit-animation: wrench 350ms  ease-in-out;
-    animation: wrench 350ms ease-in-out;
-    /**transition: transform 330ms ease-in-out**/ }
+.plat__info:hover .font .fa-check-circle {
+  -webkit-animation: wrench 350ms  ease-in-out;
+  animation: wrench 350ms ease-in-out;
+  /**transition: transform 330ms ease-in-out**/ }
 
 /*
     .font{
@@ -490,6 +494,12 @@ header {
 .card__info {
   display: flex; }
 
+/**
+ *
+ * This mixin will permit to display a colored background image following the 
+ * browser capacity, if not any an alternative image is displayed. If not any alternative
+ * image is given, the image is used as alternative as well 
+ */
 img {
   object-fit: cover;
   height: 200px;
@@ -504,10 +514,3 @@ section h2 {
   background-color: white;
   border-radius: 20px;
   margin-top: 50px; }
-
-/**
- *
- * This mixin will permit to display a colored background image following the 
- * browser capacity, if not any an alternative image is displayed. If not any alternative
- * image is given, the image is used as alternative as well 
- */
