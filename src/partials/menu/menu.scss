@@ -9,7 +9,7 @@
     background-color: white;
     border-radius: 10px;
     height:60px;
-    width:100%;
+    width:22rem;
   //   display: grid;
   // height: 100px;
   // grid-template: repeat(4, 1fr) / 20px 100px;
@@ -17,7 +17,12 @@
   // grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "titre prix coche"
   "description prix coche";
-  grid-template-columns:  auto 4rem auto;
+  // grid-template-columns:  auto 4rem auto;
+
+
+  grid-template-columns: 17rem 4rem auto;
+
+
   grid-template-rows: 50% 50%;
    overflow: hidden;
    text-overflow: ellipsis;
@@ -29,11 +34,77 @@
     //   width:90%;
       
     // }
+
+
+
+
+    
+    
+  //     animation: fadein 2s;
+  //     -moz-animation: fadein 2s; /* Firefox */
+  //     -webkit-animation: fadein 2s; /* Safari et Chrome */
+  //     -o-animation: fadein 2s; /* Opera */
+  // }
+  // @keyframes fadein {
+  //     from {
+  //         opacity:0;
+  //     }
+  //     to {
+  //         opacity:1;
+  //     }
+  // }
+  // @-moz-keyframes fadein { /* sur Firefox */
+  //     from {
+  //         opacity:0;
+  //     }
+  //     to {
+  //         opacity:1;
+  //     }
+  // }
+  // @-webkit-keyframes fadein { /* sur Safari et Chrome */
+  //     from {
+  //         opacity:0;
+  //     }
+  //     to {
+  //         opacity:1;
+  //     }
+  // }
+  // @-o-keyframes fadein { /* sur Opera */
+  //     from {
+  //         opacity:0;
+  //     }
+  //     to {
+  //         opacity: 1;
+  //     }
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  &:hover{
+
+    grid-template-columns: auto 4rem 4rem;
+    overflow: hidden;
+    width: 20rem;
+    transition: width 1s;
+    
+
+    }
     h4, h5{
       white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: calc(100% - 2rem);
+    font-size:0.9rem;
     }
 
     h4:first-of-type{
@@ -44,16 +115,19 @@
       grid-area: description;
     }
     .font{
-      width:0;
-      // overflow: hidden;
+      // width:0;
+      overflow: hidden;
+      // &:hover{
+      //   // margin-left:auto;
+      // }
     }
-    .price{
-      grid-area:prix;
-      margin-top:auto;
-      margin-left: auto;
-      font-size: 1.125rem;
-    font-weight: bold;
-    }
+    // .price{
+    //   grid-area:prix;
+    //   margin-top:auto;
+    //   // margin-left: auto;
+    //   font-size: 1.125rem;
+    // font-weight: bold;
+    // }
     &:hover{
       h4:first-of-type, h5{
         width: calc(100% - 6rem); //si coche fait 3rem
@@ -139,8 +213,13 @@
  
  
     
-
-
+ .price{
+  grid-area:prix;
+  margin-top:auto;
+  margin-left: auto;
+  font-size: 1.4rem;
+font-weight: bold;
+}
 
 
   

@@ -65,7 +65,7 @@ header{
   .descript{
     font-size: 25px;
   }
-  .menu_descript{
+  .menu__descript{
     height: 200px;
     padding-top:20px;
     display: flex;
@@ -73,11 +73,11 @@ header{
     justify-content: space-between;
     align-items: center;
   }
-  .btn_menu{
+  .btn__menu{
     display: flex;
     align-items: center;
     border-radius: 20px;
-    width:100%;
+    width:300px;
     justify-content:center;
     border: 1px solid darken($tertiary, 20);
     height:50px;
@@ -94,5 +94,28 @@ header{
     
     }
   }
+.fas{
+  color:gray;
+  padding:10px;
+}
+  // .fas:hover{
+  //   color:lighten($primary, 5)
+  // }
   
+
+
+@media screen and  (min-width: 900px) {
+
+.menu__descript{
   
+  flex-direction: row;
+  justify-content: space-around;
+  
+ 
+
+
+}
+// .btn__menu{
+//   justify-content: space-around;
+// }
+}
