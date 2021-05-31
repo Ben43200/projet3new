@@ -373,6 +373,21 @@ header {
   height: auto;
   background-color: white; }
 
+img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 20px; }
+
+section h2 {
+  font-size: 30px; }
+
+.card {
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 50px; }
+
 .plat__info {
   border: 1px solid gray;
   margin-top: 10px;
@@ -492,6 +507,134 @@ header {
   animation: wrench 350ms ease-in-out;
   /**transition: transform 330ms ease-in-out**/ }
 
+.plat__info:first-child {
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari et Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */
+  animation: translate 1s;
+  -moz-animation: translate 1s;
+  /* Firefox */ }
+
+.plat__info:nth-child(2) {
+  animation: fadein 1.5s;
+  -moz-animation: fadein 1.5s;
+  /* Firefox */
+  -webkit-animation: fadein 1.5s;
+  /* Safari et Chrome */
+  -o-animation: fadein 1.5s;
+  /* Opera */ }
+
+.plat__info:nth-child(3) {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
+  margin-bottom: 50px; }
+
+.plat__info:nth-child(4) {
+  animation: fadein 1s;
+  -moz-animation: fadein 0.75s;
+  /* Firefox */
+  -webkit-animation: fadein 0.75s;
+  /* Safari et Chrome */
+  -o-animation: fadein 0.75s;
+  /* Opera */
+  animation: translate 1s;
+  -moz-animation: translate 1s;
+  /* Firefox */ }
+
+.plat__info:nth-child(5) {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari et Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */ }
+
+.plat__info:nth-child(6) {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari et Chrome */
+  -o-animation: fadein 1s;
+  /* Opera */
+  margin-bottom: 50px; }
+
+@keyframes translate {
+  from {
+    margin-top: -5px; }
+  to {
+    margin-top: 10px; } }
+
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    margin-top: 40px; }
+  to {
+    margin-top: 0px; } }
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@media screen and (min-width: 900px) {
+  .menu__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
 /*
     .font{
         // display:none;
@@ -532,17 +675,3 @@ header {
  * browser capacity, if not any an alternative image is displayed. If not any alternative
  * image is given, the image is used as alternative as well 
  */
-img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-  border-radius: 20px; }
-
-section h2 {
-  font-size: 30px; }
-
-.card {
-  height: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin-top: 50px; }

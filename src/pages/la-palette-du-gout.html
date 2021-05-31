@@ -24,8 +24,9 @@
   <h3>La palette du goût</h3>
 <i class="far fa-heart"></i>
 </div> 
-    <article class="menu__details">
+    
       <h5>Entrée</h5>
+      <article class="menu__details"></article>
   <%- include('../partials/menu/menu.html',{
     "plat":"Tartare de poulpe acidulé",
     "info" : "Aux zestes d'orange",
@@ -47,7 +48,7 @@
     
     </article>
     <h5>Plats</h5>
-    <article class="menu__details">
+    <article class="plat__details">
         <%- include('../partials/menu/menu.html',{
             "plat":"Coquilles Saint-Jacques",
             "info" : "Accompagnées d'une purée de panais",
@@ -70,7 +71,7 @@
 
     </article>
     <h5>Desserts</h5>
-    <article class="menu__details">
+    <article class="dessert__details">
 
     <%- include('../partials/menu/menu.html',{
         "plat":"Pétales de violettes glacés",
