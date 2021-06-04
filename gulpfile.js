@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var ejs = require("gulp-ejs");
 var browserSync = require("browser-sync").create();
 var concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
 
 sass.compiler = require('node-sass');
 
@@ -12,6 +13,9 @@ function makeCss() {
   return gulp.src(["./src/base.scss",'./src/**/*.scss'])
     .pipe(concat("style.css"))
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+			cascade: false
+		}))
     .pipe(gulp.dest('./www/css'));
 }
 

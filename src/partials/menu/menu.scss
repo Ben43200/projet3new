@@ -25,6 +25,17 @@
 
 
   grid-template-columns: 17rem 4rem auto;
+  
+
+
+
+
+
+
+
+
+
+
 
 
   grid-template-rows: 50% 50%;
@@ -39,7 +50,7 @@
       
     // }
 
-
+    
 
 
     
@@ -90,18 +101,16 @@
 
 
 
-
-
-
-
   &:hover{
 
     grid-template-columns: auto 4rem 4rem;
     overflow: hidden;
-    width: 20rem;
-    transition: width 1s;
-    
+   
+ 
 
+
+
+ 
     }
     h4, h5{
       white-space: nowrap;
@@ -121,6 +130,9 @@
     .font{
       // width:0;
       overflow: hidden;
+      // transition-duration: 10s;
+      // transition-property: margin-right;
+      // margin-right:50px;
       // &:hover{
       //   // margin-left:auto;
       // }
@@ -135,6 +147,7 @@
     &:hover{
       h4:first-of-type, h5{
         width: calc(100% - 6rem); //si coche fait 3rem
+        
       }
       .font{
         width: 4rem;
@@ -148,7 +161,7 @@
     align-items: center;
         
     border-radius: 0px 10px 10px 0px;
-        //           }
+      //           }
       }
     }
   }
@@ -337,8 +350,7 @@ font-weight: bold;
           .plat__info:hover{
         //    .price{
         // margin-right:70px;
-       
-        //    }
+        
          .font {
             
           //  display:flex;
@@ -351,7 +363,7 @@ font-weight: bold;
             .fa-check-circle{
             -webkit-animation: wrench 350ms  ease-in-out;
             animation: wrench 350ms ease-in-out;
-            
+          
         
         /**transition: transform 330ms ease-in-out**/
         }
@@ -430,79 +442,19 @@ font-weight: bold;
 
 
 
-.plat__info:first-child{
+.plat__info{
   // color:red;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari et Chrome */
-  -o-animation: fadein 1s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 6s;
-  // transition-delay: 2s;
-  animation: translate 1s;
-  -moz-animation: translate 1s; /* Firefox */
+  animation: fadein 5s forwards;
+  opacity: 0;
+  
 }
 
-
-
-.plat__info:nth-child(2){
-  // color:blue;
-  animation: fadein 1.5s;
-  -moz-animation: fadein 1.5s; /* Firefox */
-  -webkit-animation: fadein 1.5s; /* Safari et Chrome */
-  -o-animation: fadein 1.5s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 7s;
-  // transition-delay: 2s;
-
-}
-.plat__info:nth-child(3){
-// color:orange;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari et Chrome */
-  -o-animation: fadein 2s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 8s;
-  // transition-delay: 2s;
-  margin-bottom: 50px;
+@for $i from 1 through 15{
+  .plat__info:nth-of-type(#{$i}){
+    animation-delay: $i*.5s;
+  }
 }
 
-
-.plat__info:nth-child(4){
-  // color:red;
-  animation: fadein 1s;
-  -moz-animation: fadein 0.75s; /* Firefox */
-  -webkit-animation: fadein 0.75s; /* Safari et Chrome */
-  -o-animation: fadein 0.75s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 4s;
-  // transition-delay: 2s;
-  animation: translate 1s;
-  -moz-animation: translate 1s; /* Firefox */
-}
-.plat__info:nth-child(5){
-  // color:blue;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari et Chrome */
-  -o-animation: fadein 1s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 6s;
-  // transition-delay: 2s;
-}
-
-.plat__info:nth-child(6){
-  // color:orange;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari et Chrome */
-  -o-animation: fadein 1s; /* Opera */
-  // transform: translateY(20px);
-  // transition-duration: 6s;
-  // transition-delay: 2s;
-  margin-bottom: 50px;
-}
 
 
 // .menu__details{
@@ -513,84 +465,17 @@ font-weight: bold;
 //   height:200px;
 // }
 
-@keyframes translate {
-  from {
-      margin-top:-5px
-  }
-  to {
-      margin-top:10px;
-  }
-}
-@-moz-keyframes fadein { /* sur Firefox */
-  from {
-    margin-top:40px
-  }
-  to {
-    margin-top:0px;
-  }
-}
-@-webkit-keyframes fadein { /* sur Safari et Chrome */
+
+@keyframes fadein { /* sur Safari et Chrome */
   from{
+      margin-top:30px;
       opacity:0;
   }
   to {
+    margin-top:10px;
       opacity:1;
   }
 }
-@-o-keyframes fadein { /* sur Opera */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-
-
-@keyframes fadein {
-0% {
-      opacity:0;
-  }
-  25%{
-    opacity:0.25;
-  }
-  50% {
-      opacity:0.5;
-  }
-  75%{
-    opacity:0.75;
-  }
-  100%{
-    opacity:1;
-  }
-}
-@-moz-keyframes fadein { /* sur Firefox */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-webkit-keyframes fadein { /* sur Safari et Chrome */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity:1;
-  }
-}
-@-o-keyframes fadein { /* sur Opera */
-  from {
-      opacity:0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-
 
 @media screen and  (min-width: 900px) {
 
