@@ -14,23 +14,22 @@
     border-radius: 10px;
     height:60px;
     width:22rem;
-  //   display: grid;
-  // height: 100px;
-  // grid-template: repeat(4, 1fr) / 20px 100px;
+ 
   display: grid;
-  // grid-template-rows: 1fr 1fr 1fr 1fr;
+
+
+
+ 
   grid-template-areas: "titre prix coche"
   "description prix coche";
-  // grid-template-columns:  auto 4rem auto;
 
 
-  grid-template-columns: 17rem 4rem auto;
+
+  grid-template-columns: 17rem 4rem 0rem;
   
 
 
-
-
-
+ 
 
 
 
@@ -105,6 +104,11 @@
 
     grid-template-columns: auto 4rem 4rem;
     overflow: hidden;
+
+
+    
+
+
    
  
 
@@ -136,6 +140,7 @@
       // &:hover{
       //   // margin-left:auto;
       // }
+      
     }
     // .price{
     //   grid-area:prix;
@@ -172,7 +177,7 @@
               color:white;
               align-self:center;
               margin:auto;
-              
+              animation: slidein 0.75s;
               // display: flex;
               // flex-direction: column;
               // justify-content: center;
@@ -236,6 +241,7 @@
   margin-left: auto;
   font-size: 1.4rem;
 font-weight: bold;
+
 }
 
 
@@ -353,16 +359,20 @@ font-weight: bold;
         
          .font {
             
+          animation: slidein 1s forwards;
+         
+
+
           //  display:flex;
-            
+          
         
             // -webkit-animation: checkbox 500ms  ease-in-out;
             // animation: checkbox 500ms ease-in-out;
             
             // transform: translateX(0px);
             .fa-check-circle{
-            -webkit-animation: wrench 350ms  ease-in-out;
-            animation: wrench 350ms ease-in-out;
+            -webkit-animation: wrench 700ms  ease-in-out;
+            animation: wrench 700ms ease-in-out;
           
         
         /**transition: transform 330ms ease-in-out**/
@@ -476,6 +486,24 @@ font-weight: bold;
       opacity:1;
   }
 }
+
+
+  @keyframes slidein {
+    from {
+      margin-left:100%;
+      // width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      // width: 100%;
+    }
+  }
+
+
+
+
+
 
 @media screen and  (min-width: 900px) {
 
