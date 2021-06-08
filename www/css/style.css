@@ -381,30 +381,39 @@ li {
   border-radius: 10px;
   height: 60px;
   width: 22rem;
-  display: grid;
-  grid-template-areas: "titre prix coche" "description prix coche";
-  grid-template-columns: 17rem 4rem 0rem;
-  grid-template-rows: 50% 50%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  /**align-self:flex-end;**/ }
-  .plat__info:hover {
-    grid-template-columns: auto 4rem 4rem;
-    overflow: hidden; }
-  .plat__info h4, .plat__info h5 {
+  display: flex;
+  overflow: hidden; }
+  .plat__info span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - $largeurPrix); }
+  .plat__info h4,
+  .plat__info h5 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: calc(100% - 2rem);
     font-size: 0.9rem; }
-  .plat__info h4:first-of-type {
-    grid-area: titre; }
-  .plat__info h5 {
-    grid-area: description; }
+  .plat__info .price {
+    margin-top: auto;
+    margin-left: auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 2rem; }
   .plat__info .font {
+    width: 0;
     overflow: hidden; }
-  .plat__info:hover h4:first-of-type, .plat__info:hover h5 {
+  .plat__info:hover span {
+    width: calc(100% - $largeurSpan); }
+  .plat__info:hover .font {
+    width: 4rem;
+    -webkit-animation: slidein 1s forwards;
+    animation: slidein 1s forwards; }
+    .plat__info:hover .font .fa-check-circle {
+      -webkit-animation: wrench 700ms ease-in-out;
+      animation: wrench 700ms ease-in-out; }
+  .plat__info:hover h4:first-of-type,
+  .plat__info:hover h5 {
     width: calc(100% - 6rem); }
   .plat__info:hover .font {
     width: 4rem;
@@ -422,33 +431,6 @@ li {
   margin: auto;
   -webkit-animation: slidein 0.75s;
   animation: slidein 0.75s; }
-
-/**
-   h4{
-      
-     /**
-      text-overflow: ellipsis;
-      white-space: nowrap;**/
-/** display:flex;**/
-/**flex-direction: column;**/
-/**align-content:flex-end;**/
-/** align-items: flex-end;**/
-/** align-self: baseline;***/
-/**padding-left: 200px;**/
-/**white-space: nowrap;**/
-/**  left:50px;**/
-/**  left:50px;**/
-.price {
-  grid-area: prix;
-  margin-top: auto;
-  margin-left: auto;
-  font-size: 1.4rem;
-  font-weight: bold; }
-
-.info {
-  font-size: 10px;
-  color: black;
-  padding: 0px; }
 
 @-webkit-keyframes wrench {
   0% {
@@ -489,14 +471,6 @@ li {
     transform: rotate(-100deg); }
   100% {
     transform: rotate(-110deg); } }
-
-.plat__info:hover .font {
-  -webkit-animation: slidein 1s forwards;
-  animation: slidein 1s forwards; }
-  .plat__info:hover .font .fa-check-circle {
-    -webkit-animation: wrench 700ms  ease-in-out;
-    animation: wrench 700ms ease-in-out;
-    /**transition: transform 330ms ease-in-out**/ }
 
 .plat__info {
   -webkit-animation: fadein 5s forwards;
@@ -599,37 +573,6 @@ li {
     flex-direction: row;
     justify-content: space-between; } }
 
-/*
-    .font{
-        // display:none;
-        border: 2px solid $tertiary;
-        background-color:(darken($tertiary, 10));
-        border-radius: 10px;
-        padding:12px;
-        transform:  translateX(200px) ;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        // justify-content: center;
-        // align-items: center;
-       margin: auto;
-      margin-left:40px;
-  grid-column: 4;
-  grid-row: 1;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
- 
-        // /**transition: transform 330ms ease-in-out;
-        .fa-check-circle{
-            font-size: 30px;
-            color:white;
-             
-            
-        
-            }
-    }
-
-*/
 .card__info {
   display: flex; }
 
